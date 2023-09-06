@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from DataTransformation import LowPassFilter, PrincipalComponentAnalysis
-from TemporalAbstraction import NumericalAbstraction
-from FrequencyAbstraction import FourierTransformation
+from features.DataTransformation import LowPassFilter, PrincipalComponentAnalysis
+from features.TemporalAbstraction import NumericalAbstraction
+from features.FrequencyAbstraction import FourierTransformation
 from sklearn.cluster import KMeans
 
 
