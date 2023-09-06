@@ -19,6 +19,13 @@ plt.rcParams["lines.linewidth"] = 2
 # Load data
 # --------------------------------------------------------------
 
+df = pd.read_pickle("../../data/interim/01_data_processed.pkl")
+df = df[df["label"] !="rest"]
+
+acc_r = df["acc_x"] ** 2 + df["acc_y"] ** 2 + df["acc_z"] ** 2
+gyr_r = df["gyr_x"] ** 2 + df["gyr_y"] ** 2 + df["gyr_z"] ** 2
+df["acc_r"] = np.sqrt(acc_r)
+df["gyr_r"] = np.sqrt(gyr_r)
 
 # --------------------------------------------------------------
 # Split data
